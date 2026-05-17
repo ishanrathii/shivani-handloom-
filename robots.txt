@@ -1,0 +1,60 @@
+# Shivani Handloom — Premium Indian Handloom Textiles
+# Pune, Maharashtra, India | umeshrathi123@gmail.com
+
+# Allow all standard crawlers
+User-agent: *
+Allow: /
+Crawl-delay: 1
+
+# Google (Search + AI Overviews + Gemini)
+User-agent: Googlebot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+# OpenAI (ChatGPT search + GPT browsing)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+# Anthropic (Claude)
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+# Perplexity AI
+User-agent: PerplexityBot
+Allow: /
+
+# Microsoft (Copilot / Bing AI)
+User-agent: Bingbot
+Allow: /
+
+User-agent: msnbot
+Allow: /
+
+# Meta AI
+User-agent: meta-externalagent
+Allow: /
+
+# Apple (Siri / AI suggestions)
+User-agent: Applebot
+Allow: /
+
+# Block only raw training scrapers (not search/citation bots)
+User-agent: CCBot
+Disallow: /
+
+User-agent: omgili
+Disallow: /
+
+User-agent: omgilibot
+Disallow: /
+
+# Sitemap
+Sitemap: https://shivanihandloom.com/sitemap.xml
