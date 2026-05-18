@@ -2457,6 +2457,90 @@ address { font-style: normal; }
   transform: translateY(0);
 }
 
+/* ---------- OUR JOURNEY SECTION ---------- */
+.journey {
+  background: var(--warm-white);
+  padding: 100px 0;
+}
+
+.journey-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  margin-top: 56px;
+}
+
+.journey-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 24px rgba(46,33,29,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.journey-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 40px rgba(46,33,29,0.14);
+}
+
+.journey-img-wrap {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 4/3;
+}
+
+.journey-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.journey-card:hover .journey-img {
+  transform: scale(1.05);
+}
+
+.journey-step {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  background: var(--gold);
+  color: #fff;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0.02em;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.journey-info {
+  padding: 20px 22px 24px;
+}
+
+.journey-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--espresso);
+  margin: 0 0 8px;
+  letter-spacing: 0.02em;
+}
+
+.journey-desc {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.82rem;
+  color: rgba(46,33,29,0.65);
+  line-height: 1.6;
+  margin: 0;
+}
+
 /* ---------- RESPONSIVE — TABLET ---------- */
 @media (max-width: 1024px) {
   .nav-links { display: none; }
@@ -2519,6 +2603,9 @@ address { font-style: normal; }
 
 /* ---------- RESPONSIVE — MOBILE ---------- */
 @media (max-width: 640px) {
+  .journey-grid { grid-template-columns: 1fr; gap: 18px; }
+  .journey { padding: 70px 0; }
+
   .container { padding: 0 20px; }
 
   .nav-container { padding: 18px 24px; }
@@ -2588,6 +2675,8 @@ address { font-style: normal; }
   .intro-gold-line { width: 200px !important; }
 
   .about-story-img { max-width: 100%; }
+
+  .journey-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
 
   .hero-deco-lines { display: none; }
 
