@@ -273,7 +273,13 @@
     ].join('\n');
 
     var waUrl = 'https://wa.me/' + wa_number + '?text=' + encodeURIComponent(text);
-    window.open(waUrl, '_blank', 'noopener,noreferrer');
+    var a = document.createElement('a');
+    a.href = waUrl;
+    a.target = '_blank';
+    a.rel = 'noopener noreferrer';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
 
     showToast('Opening WhatsApp... we\'ll respond shortly!');
     setTimeout(function () { form.reset(); clearErrors(); }, 600);
