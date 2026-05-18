@@ -261,7 +261,7 @@
     if (!valid) return;
 
     var text = [
-      'Hello Shivani Handloom,',
+      'Hello Shivani Handlooms,',
       'I am interested in your products.',
       '',
       'Name: ' + name,
@@ -352,6 +352,6 @@
 window.addEventListener('error', function (e) {
   // Silent graceful degradation — don't crash the page
   if (typeof console !== 'undefined' && console.error) {
-    console.error('Shivani Handloom script error:', e.message);
+    console.error('Shivani Handlooms script error:', e.message);
   }
 });
