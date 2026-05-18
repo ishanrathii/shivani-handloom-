@@ -216,8 +216,36 @@
 
   var wa_number = '919849149566';
 
+  function setError(id, msg) {
+    var el = document.getElementById(id);
+    if (!el) return;
+    el.textContent = msg;
+    el.style.display = msg ? 'block' : 'none';
+    var input = document.getElementById(id.replace('err-', 'inq-'));
+    if (input) input.classList.toggle('input-error', !!msg);
+  }
+
+  function clearErrors() {
+    ['err-name', 'err-phone', 'err-email', 'err-category'].forEach(function (id) { setError(id, ''); });
+  }
+
+  function showToast(msg) {
+    var toast = document.getElementById('wa-success-toast');
+    if (!toast) return;
+    toast.textContent = msg;
+    toast.classList.add('visible');
+    setTimeout(function () { toast.classList.remove('visible'); }, 4000);
+  }
+
+  // Clear individual field error on input
+  ['inq-name', 'inq-phone', 'inq-email', 'inq-category'].forEach(function (id) {
+    var el = document.getElementById(id);
+    if (el) el.addEventListener('input', function () { setError('err-' + id.replace('inq-', ''), ''); });
+  });
+
   form.addEventListener('submit', function (e) {
     e.preventDefault();
+    clearErrors();
 
     var name     = (document.getElementById('inq-name')     && document.getElementById('inq-name').value.trim())     || '';
     var phone    = (document.getElementById('inq-phone')    && document.getElementById('inq-phone').value.trim())    || '';
@@ -226,22 +254,11 @@
     var qty      = (document.getElementById('inq-qty')      && document.getElementById('inq-qty').value.trim())      || '';
     var msg      = (document.getElementById('inq-msg')      && document.getElementById('inq-msg').value.trim())      || '';
 
-    // Basic validation
-    if (!name) {
-      alert('Please enter your name.');
-      document.getElementById('inq-name').focus();
-      return;
-    }
-    if (!phone) {
-      alert('Please enter your phone number.');
-      document.getElementById('inq-phone').focus();
-      return;
-    }
-    if (!category) {
-      alert('Please select a product category.');
-      document.getElementById('inq-category').focus();
-      return;
-    }
+    var valid = true;
+    if (!name)     { setError('err-name',     'Please enter your full name.');        valid = false; }
+    if (!phone)    { setError('err-phone',    'Please enter your phone number.');     valid = false; }
+    if (!category) { setError('err-category', 'Please select a product category.');  valid = false; }
+    if (!valid) return;
 
     var text = [
       'Hello Shivani Handloom,',
@@ -258,10 +275,8 @@
     var waUrl = 'https://wa.me/' + wa_number + '?text=' + encodeURIComponent(text);
     window.open(waUrl, '_blank', 'noopener,noreferrer');
 
-    // Optional: reset form after opening WhatsApp
-    setTimeout(function () {
-      form.reset();
-    }, 500);
+    showToast('Opening WhatsApp... we\'ll respond shortly!');
+    setTimeout(function () { form.reset(); clearErrors(); }, 600);
   });
 })();
 

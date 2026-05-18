@@ -1264,16 +1264,19 @@
             <div class="form-group">
               <label for="inq-name">Full Name</label>
               <input type="text" id="inq-name" name="name" placeholder="Your full name" required autocomplete="name" />
+              <span class="field-error" id="err-name"></span>
             </div>
             <div class="form-group">
               <label for="inq-phone">Phone Number</label>
               <input type="tel" id="inq-phone" name="phone" placeholder="+91 9XXXXXXXXX" required autocomplete="tel" />
+              <span class="field-error" id="err-phone"></span>
             </div>
           </div>
           <div class="form-row">
             <div class="form-group">
               <label for="inq-email">Email Address</label>
-              <input type="email" id="inq-email" name="email" placeholder="your@email.com" required autocomplete="email" />
+              <input type="email" id="inq-email" name="email" placeholder="your@email.com" autocomplete="email" />
+              <span class="field-error" id="err-email"></span>
             </div>
             <div class="form-group">
               <label for="inq-category">Product Category</label>
@@ -1287,6 +1290,7 @@
                 <option value="Sarees">Sarees</option>
                 <option value="Other">Other</option>
               </select>
+              <span class="field-error" id="err-category"></span>
             </div>
           </div>
           <div class="form-group">
@@ -1297,8 +1301,12 @@
             <label for="inq-msg">Message</label>
             <textarea id="inq-msg" name="message" rows="4" placeholder="Tell us about your requirements, designs, or any specific preferences..."></textarea>
           </div>
-          <button type="submit" class="btn-submit">Send via WhatsApp →</button>
+          <button type="submit" class="btn-submit" id="inquirySubmitBtn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:middle;margin-right:6px;"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.136.558 4.14 1.535 5.875L0 24l6.295-1.516A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.371l-.359-.214-3.737.9.948-3.647-.234-.374A9.818 9.818 0 0112 2.182c5.424 0 9.818 4.394 9.818 9.818S17.424 21.818 12 21.818z"/></svg>
+            Send Enquiry on WhatsApp
+          </button>
         </form>
+        <div id="wa-success-toast" class="wa-success-toast" aria-live="polite"></div>
       </div>
     </div>
   </section>
