@@ -905,6 +905,15 @@ address { font-style: normal; }
   justify-content: center;
 }
 
+.about-story-img {
+  width: 100%;
+  max-width: 560px;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 8px 40px rgba(46,33,29,0.18);
+}
+
 .about-frame {
   position: relative;
   width: 100%;
@@ -2459,7 +2468,7 @@ address { font-style: normal; }
     gap: 48px;
   }
 
-  .about-visual { display: none; }
+  .about-story-img { max-width: 100%; }
 
   .collections-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -2578,7 +2587,7 @@ address { font-style: normal; }
 
   .intro-gold-line { width: 200px !important; }
 
-  .about-visual { display: none; }
+  .about-story-img { max-width: 100%; }
 
   .hero-deco-lines { display: none; }
 
