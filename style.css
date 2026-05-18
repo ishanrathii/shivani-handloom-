@@ -437,8 +437,7 @@ address { font-style: normal; }
   font-size: 1.4rem;
   font-weight: 400;
   font-style: italic;
-  color: #FFFDF8;
-  text-shadow: 0 1px 3px rgba(46,33,29,0.35);
+  color: #111;
   letter-spacing: 0.06em;
   line-height: 1;
   transition: color 0.3s;
@@ -451,8 +450,7 @@ address { font-style: normal; }
   font-size: 0.55rem;
   letter-spacing: 0.25em;
   text-transform: uppercase;
-  color: #FFFDF8;
-  text-shadow: 0 1px 3px rgba(46,33,29,0.35);
+  color: var(--gold);
   opacity: 0.9;
 }
 
