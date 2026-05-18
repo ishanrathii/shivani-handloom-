@@ -2619,8 +2619,21 @@ address { font-style: normal; }
     text-align: center;
   }
 
-  .intro-title { font-size: clamp(1.1rem, 7.5vw, 2.8rem); white-space: nowrap; }
-  .intro-card { padding: 32px 24px 28px; }
+  .intro-title {
+    font-size: clamp(1.4rem, 9vw, 2.8rem);
+    white-space: normal;
+    letter-spacing: 0.14em;
+    word-break: break-word;
+  }
+  .intro-card {
+    padding: 28px 20px 24px;
+    width: calc(100vw - 40px);
+    max-width: 400px;
+    box-sizing: border-box;
+  }
+  .intro-line { height: 36px; margin-bottom: 24px; }
+  .intro-tagline { font-size: 0.65rem; letter-spacing: 0.22em; }
+  .intro-space { width: 0.25em; }
 
   .collections-grid {
     grid-template-columns: 1fr;
