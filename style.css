@@ -1143,21 +1143,24 @@ address { font-style: normal; }
   align-items: center;
   gap: 8px;
   padding: 10px 20px;
-  background: rgba(197,164,109,0.12);
-  border: 1px solid rgba(197,164,109,0.4);
-  color: var(--gold);
+  background: rgba(0,0,0,0.55);
+  border: 1.5px solid rgba(197,164,109,0.85);
+  color: #fff;
   font-family: 'Poppins', sans-serif;
   font-size: 0.65rem;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   transition: var(--transition-fast);
   align-self: flex-start;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
 }
 
 .card-btn:hover {
-  background: rgba(197,164,109,0.25);
+  background: rgba(197,164,109,0.85);
   border-color: var(--gold);
+  color: #111;
 }
 
 .card-btn svg,
@@ -1168,14 +1171,15 @@ address { font-style: normal; }
 }
 
 .card-btn.dark {
-  background: rgba(46,33,29,0.1);
-  border-color: rgba(46,33,29,0.3);
-  color: var(--espresso);
+  background: rgba(0,0,0,0.45);
+  border-color: rgba(46,33,29,0.9);
+  color: #fff;
 }
 
 .card-btn.dark:hover {
-  background: rgba(46,33,29,0.2);
+  background: rgba(46,33,29,0.9);
   border-color: var(--espresso);
+  color: #fff;
 }
 
 /* ---------- CRAFTSMANSHIP ---------- */
