@@ -1160,6 +1160,13 @@ address { font-style: normal; }
   border-color: var(--gold);
 }
 
+.card-btn svg,
+.card-btn.dark svg {
+  color: #25D366;
+  flex-shrink: 0;
+  filter: drop-shadow(0 0 3px rgba(37,211,102,0.45));
+}
+
 .card-btn.dark {
   background: rgba(46,33,29,0.1);
   border-color: rgba(46,33,29,0.3);
