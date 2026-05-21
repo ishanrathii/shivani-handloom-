@@ -1142,43 +1142,42 @@ address { font-style: normal; }
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 10px 20px;
-  background: rgba(0,0,0,0.55);
-  border: 1.5px solid rgba(197,164,109,0.85);
-  color: #fff;
+  padding: 11px 22px;
+  background: #fff;
+  border: none;
+  color: #1a1a1a;
   font-family: 'Poppins', sans-serif;
   font-size: 0.65rem;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   transition: var(--transition-fast);
   align-self: flex-start;
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.35);
 }
 
 .card-btn:hover {
-  background: rgba(197,164,109,0.85);
-  border-color: var(--gold);
-  color: #111;
+  background: var(--gold);
+  color: #fff;
+  box-shadow: 0 4px 18px rgba(197,164,109,0.5);
 }
 
 .card-btn svg,
 .card-btn.dark svg {
   color: #25D366;
   flex-shrink: 0;
-  filter: drop-shadow(0 0 3px rgba(37,211,102,0.45));
+  filter: drop-shadow(0 0 2px rgba(37,211,102,0.5));
 }
 
 .card-btn.dark {
-  background: rgba(0,0,0,0.45);
-  border-color: rgba(46,33,29,0.9);
-  color: #fff;
+  background: #fff;
+  border: none;
+  color: #1a1a1a;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.2);
 }
 
 .card-btn.dark:hover {
-  background: rgba(46,33,29,0.9);
-  border-color: var(--espresso);
+  background: var(--espresso);
   color: #fff;
 }
 
